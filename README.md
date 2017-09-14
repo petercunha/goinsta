@@ -1,13 +1,12 @@
 ### THIS IS NOT THE ORIGINAL GOINSTA. This is a fork!
 
+Original is here: https://github.com/ahmdrz/goinsta
+
 This is a version of GoInsta that is custom tailored for account cracking. It's been modified to be faster and fault tolerant on failed logins. It's intended use is for my BitBuster program, found here: https://github.com/petercunha/BitBuster
 
 If you're a developer, you should use the original version of GoInsta. Not mine.
 
-
----
-
-*The original Readme file is below*
+.
 
 .
 
