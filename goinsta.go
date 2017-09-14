@@ -177,17 +177,21 @@ func (insta *Instagram) Login() error {
 	insta.Informations.RankToken = strconv.FormatInt(Result.LoggedInUser.ID, 10) + "_" + insta.Informations.UUID
 	insta.IsLoggedIn = true
 
-	insta.SyncFeatures()
-	insta.AutoCompleteUserList()
-	insta.GetRankedRecipients()
-	insta.Timeline("")
-	insta.GetRankedRecipients()
-	insta.GetRecentRecipients()
-	insta.MegaphoneLog()
-	insta.GetV2Inbox()
-	insta.GetRecentActivity()
-	insta.GetReelsTrayFeed()
-
+	// Commented out for speed purposes (github.com/petercunha/goinsta)
+	
+	/*
+		insta.SyncFeatures()
+		insta.AutoCompleteUserList()
+		insta.GetRankedRecipients()
+		insta.Timeline("")
+		insta.GetRankedRecipients()
+		insta.GetRecentRecipients()
+		insta.MegaphoneLog()
+		insta.GetV2Inbox()
+		insta.GetRecentActivity()
+		insta.GetReelsTrayFeed()
+	*/
+	
 	return nil
 }
 
