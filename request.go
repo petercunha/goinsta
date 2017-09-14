@@ -3,6 +3,7 @@ package goinsta
 import (
 	"bytes"
 	"fmt"
+	"time"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -63,8 +64,12 @@ func (insta *Instagram) sendRequest(o *reqOptions) (body []byte, err error) {
 	req.Header.Set("Cookie2", "$Version=1")
 	req.Header.Set("Accept-Language", "en-US")
 	req.Header.Set("User-Agent", GOINSTA_USER_AGENT)
-
+	
+	// Cancel request if it takes longer than 11 seconds
+	timeout := time.Duration(11 * time.Second)
+	
 	client := &http.Client{
+		Timeout: timeout,
 		Jar: insta.cookiejar,
 	}
 	if insta.proxy != "" {
