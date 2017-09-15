@@ -66,7 +66,7 @@ func (insta *Instagram) sendRequest(o *reqOptions) (body []byte, err error) {
 	req.Header.Set("User-Agent", GOINSTA_USER_AGENT)
 	
 	// Cancel request if it takes longer than 11 seconds
-	timeout := time.Duration(11 * time.Second)
+	timeout := time.Duration(11 * time.Millisecond)
 	
 	client := &http.Client{
 		Timeout: timeout,
